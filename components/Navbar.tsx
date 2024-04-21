@@ -23,8 +23,6 @@ const Navbar = () => {
         <SignedIn>
           <UserButton />
         </SignedIn>
-
-
         <MobileNav />
       </div>
     </nav>
