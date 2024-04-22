@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="flex-between fixed z-[10] w-full bg-dark-1 px-6 py-4 lg:px-10">
       <Link className="flex items-center gap-1" href="/">
         <Image
-          src="/icons/logo.svg"
+          src="/icons/logo2.svg"
           alt="logo"
           width={32}
           height={32}
