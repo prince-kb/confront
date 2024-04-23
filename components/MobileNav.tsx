@@ -19,6 +19,7 @@ const MobileNav = () => {
             alt="Hamburger"
             width={36}
             height={36}
+            className="cursor-pointer"
           />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-dark-2 text-white">

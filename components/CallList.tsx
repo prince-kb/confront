@@ -44,7 +44,6 @@ const CallList = ({type} : {type : 'ended' | 'upcoming' | 'recordings'}) => {
             const fetchRecordings = async()=>{
                 const callData = await Promise.all(callRecordings.map((meeting)=>meeting.queryRecordings()))
                 if(callData && callData.length === 0){
-                    toast({title : 'Please try again later!'})
                     return;
                 }
                 const recordings = callData.filter(call=>call.recordings.length > 0).flatMap(call => call.recordings)
@@ -58,6 +57,8 @@ const CallList = ({type} : {type : 'ended' | 'upcoming' | 'recordings'}) => {
         
     },[type,callRecordings])
 
+
+    
     const calls = getCalls();
     const noCallsMessage = getNoCallsMessage();
     if(isLoading) return <Loader/>
