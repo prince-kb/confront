@@ -1,10 +1,10 @@
 "use client";
 import { useGetCallById } from '@/Hooks/useGetCallById';
+import Loader from '@/components/Loader';
 import MeetingRoom from '@/components/MeetingRoom';
 import MeetingSetup from '@/components/MeetingSetup';
 import { useUser } from '@clerk/nextjs';
 import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk';
-import { Loader } from 'lucide-react';
 import React, { useState } from 'react'
 
 
