@@ -1,5 +1,6 @@
 'use client';
 import React,{useState} from 'react'
+import { Input } from "@/components/ui/input"
 import { useToast } from "@/components/ui/use-toast"
 import { Textarea } from "@/components/ui/textarea"
 import HomeCard from './HomeCard'
@@ -130,6 +131,16 @@ const MeetingTypeList = () => {
             buttonText="Start Meeting"
             handleClick={createMeeting}
         />
+        <MeetingModal
+            isOpen={meeting==='isJoiningMeeting'}
+            onClose={()=>setMeeting(undefined)}
+            title="Paste the link here"
+            className="text-center"
+            buttonText="Join Meeting"
+            handleClick={()=>router.push(values.link)}
+        ><Input placeholder='Meeting Link' className='bg-dark-1 text-white border-none focus-visible:ring-0 focus-visible:ring-offset-none' onChange={(e)=>setValues({...values,link : e.target.value})}/>
+        </MeetingModal>
+
     </section>
   )
 }
