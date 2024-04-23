@@ -57,8 +57,7 @@ const MeetingTypeList = () => {
                 title: "Failed to create a meeting",
                 description: "Please try again later",
               })
-        }
-    }
+        }}
 
     const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`
   return (
@@ -121,7 +120,6 @@ const MeetingTypeList = () => {
                     buttonIcon = '/icons/copy.svg'
                     buttonText="Copy Meeting Link"
                 />
-            
             )}
         <MeetingModal
             isOpen={meeting==='isInstantMeeting'}
@@ -140,7 +138,6 @@ const MeetingTypeList = () => {
             handleClick={()=>router.push(values.link)}
         ><Input placeholder='Meeting Link' className='bg-dark-1 text-white border-none focus-visible:ring-0 focus-visible:ring-offset-none' onChange={(e)=>setValues({...values,link : e.target.value})}/>
         </MeetingModal>
-
     </section>
   )
 }
