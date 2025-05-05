@@ -10,7 +10,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Confront",
+  title: "Comfront",
   description: "Video calling featured Next Application ",
   icons : {
     icon : '/icons/logo1.svg'
